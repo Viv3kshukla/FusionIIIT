@@ -22,6 +22,7 @@
        <div class="ui active tab segment" data-tab="cse">
 
             <form class="ui form" action="attendance" method="post">
+                {% csrf_token %}
                   <div class="field">
                        <div class="three fields">
                           <div class="field">
@@ -80,10 +81,10 @@
 
                           <div class="four wide field">
                               <label><br></label>
-                              <div class="ui primary button">
+                              <button class="ui primary button" type="submit">
                                   Save
                                   <i class="ui save icon right floated"></i>
-                              </div>
+                              </button>
                           </div> 
                       </div>
       
@@ -202,13 +203,24 @@
 
    <div class="ui tab segment" data-tab="ece">
 
-            <form class="ui form">
+            <form class="ui form" action="attendance" method="post">
+                {% csrf_token %}
                   <div class="field">
                        <div class="three fields">
                           <div class="field">
-                              <label>Name</label>
-                              <input placeholder="Name" type="text">
-                                 
+                              <label>P/A</label>
+                              <div class="ui fluid search selection dropdown">
+                                          <input type="hidden" name="status">
+                                          <i class="dropdown icon"></i>
+                                          <div class="default text">Batch</div>
+                                          <div class="menu">
+                                              <div class="item" data-value="present">Present</div>
+                                              <div class="item" data-value="absent">Absent</div>
+
+
+                                          </div>
+                              </div>
+
                           </div>
 
                           <div class="field">
@@ -222,16 +234,16 @@
                                               <div class="item" data-value="2015">2015</div>
                                               <div class="item" data-value="2016">2016</div>
                                               <div class="item" data-value="2017">2017</div>
-                     
+
                                           </div>
-                                      </div>
+                                  </div>
                           </div>
-                      
+
                        <div class="field">
                               <label>Roll No.</label>
-                              <input placeholder="Roll No." type="text" name="student_id">
+                              <input placeholder="Roll No." type="text">
                           </div>
-                          
+
                       </div>
                   </div>
 
@@ -239,22 +251,22 @@
                           <div class="six wide field">
                               <div class="field">
                                   <label>Course Code</label>
-                                  <input placeholder="Course Code" type="text" name="course_id">
+                                  <input placeholder="Course Code" type="text">
                               </div>
                           </div>
                            <div class="six wide field">
                               <div class="field">
-                                  <label>Attendance Percentage</label>
-                                  <input placeholder="Attendance Percentage" type="text">
+                                  <label>Date</label>
+                                  <input placeholder=" " type="date" name="date">
                               </div>
                           </div>
 
                           <div class="four wide field">
                               <label><br></label>
-                              <div class="ui primary button">
+                              <button class="ui primary button" type="submit">
                                   Save
                                   <i class="ui save icon right floated"></i>
-                              </div>
+                              </button>
                           </div> 
                       </div>
       
@@ -372,13 +384,24 @@
 
    <div class="ui  tab segment" data-tab="mech">
 
-            <form class="ui form">
+            <form class="ui form" action="attendance" method="post">
+                {% csrf_token %}
                   <div class="field">
                        <div class="three fields">
                           <div class="field">
-                              <label>Name</label>
-                              <input placeholder="Name" type="text">
-                                 
+                              <label>P/A</label>
+                              <div class="ui fluid search selection dropdown">
+                                          <input type="hidden" name="status">
+                                          <i class="dropdown icon"></i>
+                                          <div class="default text">Batch</div>
+                                          <div class="menu">
+                                              <div class="item" data-value="present">Present</div>
+                                              <div class="item" data-value="absent">Absent</div>
+
+
+                                          </div>
+                              </div>
+
                           </div>
 
                           <div class="field">
@@ -392,16 +415,16 @@
                                               <div class="item" data-value="2015">2015</div>
                                               <div class="item" data-value="2016">2016</div>
                                               <div class="item" data-value="2017">2017</div>
-                     
+
                                           </div>
-                                      </div>
+                                  </div>
                           </div>
-                      
+
                        <div class="field">
                               <label>Roll No.</label>
                               <input placeholder="Roll No." type="text">
                           </div>
-                          
+
                       </div>
                   </div>
 
@@ -414,17 +437,17 @@
                           </div>
                            <div class="six wide field">
                               <div class="field">
-                                  <label>Attendance Percentage</label>
-                                  <input placeholder="Attendance Percentage" type="text">
+                                  <label>Date</label>
+                                  <input placeholder=" " type="date" name="date">
                               </div>
                           </div>
 
                           <div class="four wide field">
                               <label><br></label>
-                              <div class="ui primary button">
+                              <button class="ui primary button" type="submit">
                                   Save
                                   <i class="ui save icon right floated"></i>
-                              </div>
+                              </button>
                           </div> 
                       </div>
       
@@ -546,13 +569,24 @@
 
    <div class="ui tab segment" data-tab="design">
 
-            <form class="ui form">
+            <form class="ui form" action="attendance" method="post">
+                {% csrf_token %}
                   <div class="field">
                        <div class="three fields">
                           <div class="field">
-                              <label>Name</label>
-                              <input placeholder="Name" type="text">
-                                 
+                              <label>P/A</label>
+                              <div class="ui fluid search selection dropdown">
+                                          <input type="hidden" name="status">
+                                          <i class="dropdown icon"></i>
+                                          <div class="default text">Batch</div>
+                                          <div class="menu">
+                                              <div class="item" data-value="present">Present</div>
+                                              <div class="item" data-value="absent">Absent</div>
+
+
+                                          </div>
+                              </div>
+
                           </div>
 
                           <div class="field">
@@ -566,16 +600,16 @@
                                               <div class="item" data-value="2015">2015</div>
                                               <div class="item" data-value="2016">2016</div>
                                               <div class="item" data-value="2017">2017</div>
-                     
+
                                           </div>
-                                      </div>
+                                  </div>
                           </div>
-                      
+
                        <div class="field">
                               <label>Roll No.</label>
                               <input placeholder="Roll No." type="text">
                           </div>
-                          
+
                       </div>
                   </div>
 
@@ -588,17 +622,17 @@
                           </div>
                            <div class="six wide field">
                               <div class="field">
-                                  <label>Attendance Percentage</label>
-                                  <input placeholder="Attendance Percentage" type="text">
+                                  <label>Date</label>
+                                  <input placeholder=" " type="date" name="date">
                               </div>
                           </div>
 
                           <div class="four wide field">
                               <label><br></label>
-                              <div class="ui primary button">
+                              <button class="ui primary button" type="submit">
                                   Save
                                   <i class="ui save icon right floated"></i>
-                              </div>
+                              </button>
                           </div> 
                       </div>
       
