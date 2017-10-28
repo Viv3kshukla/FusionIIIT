@@ -109,8 +109,10 @@ class Grades(models.Model):
 class Student_attendance(models.Model):
     student_id = models.ForeignKey(Student)
     course_id = models.ForeignKey(Course)
-    attend = models.CharField(max_length=6, choices=Constants.ATTEND_CHOICES)
-    date = models.DateField()
+    attend = models.CharField(max_length=6, choices=Constants.ATTEND_CHOICES, default="absent")
+    date = models.DateField(auto_now=True)
+    current_attend=models.IntegerField(default=0)
+    total_attend=models.IntegerField(default=0)
 
     class Meta:
         db_table = 'Student_attendance'

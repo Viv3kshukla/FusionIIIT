@@ -21,12 +21,22 @@
 
        <div class="ui active tab segment" data-tab="cse">
 
-            <form class="ui form">
+            <form class="ui form" action="attendance" method="post">
                   <div class="field">
                        <div class="three fields">
                           <div class="field">
-                              <label>Name</label>
-                              <input placeholder="Name" type="text">
+                              <label>P/A</label>
+                              <div class="ui fluid search selection dropdown">
+                                          <input type="hidden" name="status">
+                                          <i class="dropdown icon"></i>
+                                          <div class="default text">Batch</div>
+                                          <div class="menu">
+                                              <div class="item" data-value="present">Present</div>
+                                              <div class="item" data-value="absent">Absent</div>
+
+
+                                          </div>
+                              </div>
                                  
                           </div>
 
@@ -43,7 +53,7 @@
                                               <div class="item" data-value="2017">2017</div>
                      
                                           </div>
-                                      </div>
+                                  </div>
                           </div>
                       
                        <div class="field">
@@ -63,8 +73,8 @@
                           </div>
                            <div class="six wide field">
                               <div class="field">
-                                  <label>Attendance Percentage</label>
-                                  <input placeholder="Attendance Percentage" type="text">
+                                  <label>Date</label>
+                                  <input placeholder=" " type="date" name="date">
                               </div>
                           </div>
 
@@ -219,7 +229,7 @@
                       
                        <div class="field">
                               <label>Roll No.</label>
-                              <input placeholder="Roll No." type="text">
+                              <input placeholder="Roll No." type="text" name="student_id">
                           </div>
                           
                       </div>
@@ -229,7 +239,7 @@
                           <div class="six wide field">
                               <div class="field">
                                   <label>Course Code</label>
-                                  <input placeholder="Course Code" type="text">
+                                  <input placeholder="Course Code" type="text" name="course_id">
                               </div>
                           </div>
                            <div class="six wide field">
